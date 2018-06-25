@@ -12,52 +12,43 @@ import java.awt.Graphics;
  * @author Rogelio
  */
 public class Arista {
-    private int x1,x2,y1,y2, peso;
-   
+    private int peso;
+    private Nodo nodo1;
+    private Nodo nodo2;   
 
-    public Arista(int x1, int x2, int y1, int y2, int peso) {
-        this.x1 = x1;
-        this.x2 = x2;
-        this.y1 = y1;
-        this.y2 = y2;
-        this.peso=peso;
+    public Arista(int peso, Nodo nodo1, Nodo nodo2) {
+        this.peso = peso;
+        this.nodo1 = nodo1;
+        this.nodo2 = nodo2;
     }
     
     public void dibujar(Graphics g){
-        g.drawLine(x1, y1, x2, y2);
+        g.drawLine(nodo1.getX(), nodo1.getY(), nodo2.getX(), nodo2.getY());
     }
 
-    public int getX1() {
-        return x1;
+    public int getPeso() {
+        return peso;
     }
 
-    public void setX1(int x1) {
-        this.x1 = x1;
+    public void setPeso(int peso) {
+        this.peso = peso;
     }
 
-    public int getX2() {
-        return x2;
+    public Nodo getNodo1() {
+        return nodo1;
     }
 
-    public void setX2(int x2) {
-        this.x2 = x2;
+    public void setNodo1(Nodo nodo1) {
+        this.nodo1 = nodo1;
     }
 
-    public int getY1() {
-        return y1;
+    public Nodo getNodo2() {
+        return nodo2;
     }
 
-    public void setY1(int y1) {
-        this.y1 = y1;
+    public void setNodo2(Nodo nodo2) {
+        this.nodo2 = nodo2;
     }
 
-    public int getY2() {
-        return y2;
-    }
-
-    public void setY2(int y2) {
-        this.y2 = y2;
-    }
-    
-    
+   
 }
